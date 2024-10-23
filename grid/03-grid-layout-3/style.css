@@ -89,3 +89,68 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+/* Solution */
+
+.container,
+.header,
+.menu ul,
+.nav ul,
+.sidebar,
+.sidebar div,
+.article {
+  display: grid;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+.container {
+  gap: 4px;
+  grid-template-columns: 1fr 4fr;
+}
+
+.header {
+  grid-template-columns: 1fr 2fr;
+  grid-column: 1 / 3;
+}
+
+.logo {
+  justify-self: start;
+}
+
+.menu {
+  align-self: center;
+}
+
+.menu ul {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.nav ul {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sidebar {
+  grid-row: 2 / 4;
+  gap: 50px;
+}
+
+.sidebar div {
+  justify-items: center;
+  align-items: center;
+}
+
+.article {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  height: 200px;
+}
+
+.footer {
+  grid-column: 1 / 3;
+}
